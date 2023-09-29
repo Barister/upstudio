@@ -6,33 +6,100 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Главная</title>
-   <link rel="stylesheet" href="css/style.min.css?_v=20230929184832">
+   <title>UpStudio Team - мы создаем сайты, которые работают</title>
+   <link rel="stylesheet" href="css/style.min.css?_v=20230929225839">
 </head>
 
 <body>
 
-   <header>
+   <div class="wrapper">
+
+      <header class="header">
+
+   <div class="header__container">
+      <div class="header__logo">
+         <img src="img/logo.svg" alt="UpStudio Team logo">
+      </div>
+      <nav class="header__menu menu">
+         <ul class="menu__list">
+            <li class="menu__item menu__item--active"><a href="#about">О нас</a></li>
+            <li class="menu__item"><a href="#portfolio">Портфолио</a></li>
+            <li class="menu__item"><a href="#services">Услуги</a></li>
+            <li class="menu__item"><a href="#contacts">Контакты</a></li>
+         </ul>
+      </nav>
+      <button class="header__button btn"><span>Оставить заявку</span></button>
+      <div class="header__burger">
+         <span></span>
+      </div>
+   </div>
 
 </header>
-   <main>
 
-      <section class="hero"></section>
-      <section class="about-us"></section>
-      <section class="portfolio"></section>
-      <section class="services"></section>
-      <section class="choose"></section>
-      <section class="rules"></section>
-      <section class="quiz"></section>
-      <section class="stages"></section>
-      <section class="call-to-action"></section>
+      <main>
+         <section class="hero">
+            <div class="hero__container">
+               <div class="hero__header">
+                  <h1 class="hero__title title">UP Studio Team</h1>
+                  <div class="hero__subtitle">
+                     <p>Мы создаем сайты, которые работают</p>
+                  </div>
+               </div>
+               <div class="hero__body body-hero">
+                  <div class="body-hero__item item-hero item-hero--1">
+                     <div class="item-hero__sign">
+                        <img src="img/hero/icon-01.svg" alt="clock icon">
+                     </div>
+                     <div class="item-hero__text">
+                        <h4>Освобождаем ваше время</h4>
+                     </div>
+                  </div>
+                  <div class="body-hero__item item-hero item-hero--2">
+                     <div class="item-hero__sign">
+                        <img src="img/hero/icon-02.svg" alt="done icon">
+                     </div>
+                     <div class="item-hero__text">
+                        <h4>Даём гарантию на сайт</h4>
+                     </div>
+                  </div>
+                  <div class="body-hero__item item-hero item-hero--3">
+                     <div class="item-hero__sign">
+                        <img src="img/hero/icon-03.svg" alt="man icon">
+                     </div>
+                     <div class="item-hero__text">
+                        <h4>Увеличиваем конверсию</h4>
+                     </div>
+                  </div>
+                  <div class="body-hero__item item-hero item-hero--4">
+                     <div class="item-hero__sign">
+                        <img src="img/hero/icon-04.svg" alt="wheel icon">
+                     </div>
+                     <div class="item-hero__text">
+                        <h4>Упрощаем работу бизнеса</h4>
+                     </div>
+                  </div>
+               </div>
+               <button class="hero__button btn">
+                  <span>Заказать сайт</span>
+               </button>
+            </div>
+         </section>
+         <section id="about" class="about-us"></section>
+         <section id="portfolio" class="portfolio"></section>
+         <section id="services" class="services"></section>
+         <section class="choose"></section>
+         <section class="rules"></section>
+         <section class="quiz"></section>
+         <section class="stages"></section>
+         <section id="contacts" class="contacts"></section>
+      </main>
 
+      
 
-   </main>
-   
+   </div>
 
-   <script src="js/app.min.js?_v=20230929184832"></script>
-   <!-- <script src="js/script.min.js?_v=20230929184832"></script> -->
+   <script src="js/app.min.js?_v=20230929225839"></script>
+   <!-- <script src="js/script.min.js?_v=20230929225839"></script> -->
 
 </body>
 

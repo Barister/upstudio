@@ -69,3 +69,132 @@ body {
       padding: 0px 30px;
    }
 }
+
+
+// Modules
+
+.title {
+   font-size: clamp(35px, 64px, 6.4rem);
+   text-transform: uppercase;
+   line-height: 100%;
+   font-family: Kanit, sans-serif;
+}
+
+.btn {
+   span {
+      text-wrap: nowrap;
+   }
+}
+
+
+
+// Header scss import
+@import 'header';
+
+/*******************************************************************************************************************/
+// hero section
+
+.hero {
+   
+   /* .hero__container */
+
+   &__container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      row-gap: clamp(3.0rem, 70px, 8.0rem);
+      justify-content: center;
+      align-items: center;
+   }
+
+   /* .hero__header */
+
+   &__header {
+      text-align: center;
+   }
+
+   /* .hero__title */
+
+   &__title {
+   }
+
+   /* .hero__subtitle */
+
+   &__subtitle {
+      position: relative;
+      
+      padding: 2.0rem 0px 2.0rem 0px;
+      p {
+         letter-spacing: 1.12px;
+      }
+      &::after {
+         content: '';
+         height: 2px;
+         width: 61.8%; /* 309/500 */
+         background-color: #69BF3D;
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+
+   /* .hero__body */
+
+   &__body {
+   }
+}
+
+.body-hero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   column-gap: 2.0rem;
+
+   /* .body-hero__item */
+
+   &__item {
+   }
+}
+.item-hero {
+   background: #2D2D2D;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+   &--1 {
+      width: 175.137px;
+      height: 169px;
+   }
+   &--2 {
+      width: 220.735px;
+      height: 213px;
+   }
+   &--3 {
+      width: 155.447px;
+      height: 150px;
+   }
+   &--4 {
+      width: 132.652px;
+      height: 128.004px;
+   }
+
+   /* .item-hero__sign */
+
+   &__sign {
+      flex: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   /* .item-hero__text */
+
+   &__text {
+      flex: 50%;
+   }
+}
+.btn {
+}
+
