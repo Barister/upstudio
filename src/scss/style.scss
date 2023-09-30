@@ -92,6 +92,14 @@ body {
 @import 'header';
 
 /*******************************************************************************************************************/
+
+// main
+
+main {
+   height: 2000px;
+}
+
+
 // hero section
 
 .hero {
@@ -143,6 +151,29 @@ body {
 
    &__body {
    }
+
+   &__button {
+      border-radius: 41px;
+      border: 1px solid #000;
+      padding: 0.8rem 4.8rem 0.8rem 4.8rem;
+      span {
+         font-size: 1.6rem;
+         line-height: 149%;
+         position: relative;
+         padding-left: 25px;
+         &::before {
+            position: absolute;
+            content: '';
+            left: -40px;
+            top: 0;
+            height: 32px;
+            width: 32px;
+            transform: translateY(-20%);
+            background: url('@img/hero/button.svg');
+         }
+      }
+   }
+
 }
 
 .body-hero {
@@ -162,23 +193,56 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding: 5px;
+
+   h4 {
+      background: #FDFDFD;
+      border-radius: 12px;
+      text-align: center;
+      font-size: clamp(1.6rem, 18px, 1.8rem);
+      line-height: 100.5%;
+      padding: 0.9rem 0px 0.9rem 0px;
+   }
    
    &--1 {
       width: 175.137px;
       height: 169px;
+      h4 {
+         font-size: 1.8rem;
+         letter-spacing: 1.26px;
+      }
+      
    }
    &--2 {
       width: 220.735px;
       height: 213px;
+      
+      h4 {
+         font-size: 2.4rem;
+         letter-spacing: 1.68px;
+      }
    }
    &--3 {
       width: 155.447px;
       height: 150px;
+
+      h4 {
+         font-size: 1.6rem;
+         letter-spacing: 1.12px;
+      }
+      
    }
    &--4 {
       width: 132.652px;
       height: 128.004px;
+      h4 {
+         font-size: 1.4rem;
+         letter-spacing: 0.98px;
+      }
+      
    }
+
+   
 
    /* .item-hero__sign */
 
@@ -194,7 +258,8 @@ body {
    &__text {
       flex: 50%;
    }
+
+   
 }
-.btn {
-}
+
 
