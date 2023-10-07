@@ -98,9 +98,11 @@
             width: 64px;
             &::before {
                width: 64px;
+               top: -10px;
             } 
             &::after {
                width: 49px;
+               top: 10px;
             }
          }
          
