@@ -42,3 +42,17 @@ headerMenu.addEventListener('click', (event) => {
       body.classList.remove('scroll-lock');
    }
 });
+
+
+
+//  переменные размеры для шрифта в зависимости от размера родительского элемента
+
+const bodyHeroItemArray = document.querySelectorAll('.body-hero__item');
+
+// bodyHeroItemArray.forEach(element => {
+
+// });
+
+// document.addEventListener('')
+
+console.log(bodyHeroItemArray);
