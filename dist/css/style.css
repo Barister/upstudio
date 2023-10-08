@@ -64,6 +64,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+body.scroll-lock {
+  overflow: hidden;
+}
+
 .wrapper {
   height: 100%;
   width: 100%;
@@ -89,6 +93,10 @@ body {
 
 .btn span {
   text-wrap: nowrap;
+}
+
+.green {
+  color: #69BF3D;
 }
 
 .header {
@@ -117,6 +125,8 @@ body {
 }
 
 .header__logo {
+  position: relative;
+  z-index: 10;
   padding: 1.3rem 0px 1.3rem 0px;
 }
 
@@ -140,8 +150,7 @@ body {
   display: none;
   justify-self: right;
   position: relative;
-  height: 100%;
-  top: 50%;
+  height: 33px;
 }
 
 .header__burger span {
@@ -151,6 +160,7 @@ body {
   width: 100px;
   height: 1px;
   z-index: 10;
+  top: 50%;
 }
 
 .header__burger span::before {
@@ -166,7 +176,7 @@ body {
 .header__burger span::after {
   content: "";
   position: absolute;
-  top: 15px;
+  bottom: -15px;
   right: 0;
   background: #000;
   width: 75px;
@@ -174,7 +184,7 @@ body {
   transition: all 0.5s ease;
 }
 
-.header__burger:hover span::after {
+.header__burger.active span::after {
   width: 100px;
 }
 
@@ -195,6 +205,12 @@ body {
   text-wrap: nowrap;
 }
 
+.menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: #69BF3D;
+  text-underline-offset: 4px;
+}
+
 /*******************************************************************************************************************/
 
 .hero {
@@ -202,7 +218,6 @@ body {
   /* .hero__header */
   /* .hero__title */
   /* .hero__subtitle */
-  /* .hero__body */
 }
 
 .hero__container {
@@ -299,7 +314,7 @@ body {
   padding: 5px;
   min-width: 14.6rem;
   aspect-ratio: 14/13.5;
-  box-shadow: 10px 10px 25px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 18px 25px -3px rgba(0, 0, 0, 0.4);
   /* .item-hero__sign */
   /* .item-hero__text */
 }
@@ -363,6 +378,95 @@ body {
   max-width: 100%;
 }
 
+.about {
+  background: #F6F6F6;
+  padding: 120px 0px 120px 0px;
+  /* .about__container */
+  /* .about__body */
+  /* .about__content */
+  /* .about__title */
+  /* .about__text */
+  /* .about__subtitle */
+  /* .about__art */
+  /* .about__slogan */
+}
+
+.about__body {
+  max-width: 130rem;
+  background-color: #2D2D2D;
+  border-radius: 50px;
+  box-shadow: 0px 18px 25px -3px rgba(0, 0, 0, 0.4);
+  display: flex;
+  overflow: hidden;
+}
+
+.about__content {
+  flex: 1 0 55%;
+  padding: 45px 45px 60px 70px;
+  color: #F6F6F6;
+}
+
+.about__title {
+  margin: 0px 0px 35px 0px;
+}
+
+.about__text {
+  font-size: 1.4rem;
+  position: relative;
+  margin: 0px 0px 0px 35px;
+  max-width: 450px;
+  letter-spacing: 0.98px;
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.about__text::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #69BF3D;
+  left: -35px;
+}
+
+.about__text:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.about__subtitle {
+  max-width: 450px;
+  font-size: 1.2rem;
+  letter-spacing: 1.68px;
+  color: #D9D9D9;
+}
+
+.about__art {
+  flex: 1 1 45%;
+  padding: 70px 70px 70px 90px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__art img {
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.about__art::after {
+  background: radial-gradient(109.84% 205.47% at 49.93% 0%, #000 28.94%, #69BF3D 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 991.98px) {
   [class*=__container] {
     padding: 0px 20px;
@@ -370,27 +474,62 @@ body {
 
   .header__container {
     grid-template-columns: 150px 1fr;
+    align-content: start;
+  }
+
+  .header__container.active {
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.99);
+    overflow-y: auto;
   }
 
   .header__menu {
-    background-color: rgba(255, 255, 255, 0.99);
-    position: fixed;
-    height: 100%;
-    left: 0;
+    display: none;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    right: 0;
     top: 0;
-    overflow-y: auto;
-    padding: 100px 0px 20px 0px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease 0s;
+    padding: 20px;
+    text-align: center;
+    max-width: unset;
+  }
+
+  .header__menu.active {
+    display: block;
   }
 
   .header__button {
     display: none;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+  }
+
+  .header__button.active {
+    display: block;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    justify-self: center;
   }
 
   .header__burger {
     display: block;
+  }
+
+  .menu__list {
+    display: block;
+  }
+
+  .menu__list li {
+    margin: 0px 0px 20px 0px;
+    font-size: 2.8rem;
+  }
+
+  .about__content {
+    padding: 45px 30px 50px 50px;
+  }
+
+  .about__art {
+    padding: 50px 50px 50px 50px;
   }
 }
 
@@ -401,6 +540,7 @@ body {
 
   .hero__container {
     height: unset;
+    padding-bottom: 120px;
   }
 }
 
@@ -437,6 +577,55 @@ body {
   .item-hero--4 {
     order: 4;
   }
+
+  .about__body {
+    flex-direction: column;
+  }
+
+  .about__content {
+    padding: 45px 20px 30px 20px;
+  }
+
+  .about__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: unset;
+    max-width: unset;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
+  .about__text:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .about__text::before {
+    display: none;
+  }
+
+  .about__text p {
+    position: relative;
+    max-width: 300px;
+    margin: 0px 0px 0px 20px;
+  }
+
+  .about__text p::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #69BF3D;
+    left: -20px;
+  }
+
+  .about__text p:not(:last-child) {
+    margin-bottom: unset;
+  }
+
+  .about__subtitle {
+    max-width: unset;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -458,12 +647,12 @@ body {
     top: 10px;
   }
 
-  .header__burger:hover span::after {
+  .header__burger.active span::after {
     width: 64px;
   }
 
-  main {
-    margin-top: 11rem;
+  .hero__container {
+    padding-bottom: 45px;
   }
 
   .body-hero {
@@ -477,5 +666,23 @@ body {
 
   .item-hero h4 {
     font-size: 1.6rem !important;
+  }
+
+  .about__text {
+    display: block;
+  }
+
+  .about__text p:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .about {
+    padding: 45px 0px 120px 0px;
+  }
+}
+
+@media (max-height: 550px) or (max-width: 479.98px) {
+  main {
+    margin-top: 11rem;
   }
 }

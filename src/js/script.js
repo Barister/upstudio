@@ -21,12 +21,16 @@ window.addEventListener('scroll', toggleHeaderClass);
 // burger activation
 
 const burger = document.querySelector('.header__burger');
+const headeContainer = document.querySelector('.header__container');
 const headerMenu = document.querySelector('.header__menu');
-const body = document.querySelector('body'); // Получаем элемент <body>
+const headerButton = document.querySelector('.header__button');
+const body = document.querySelector('body');
 
 burger.addEventListener('click', () => {
    burger.classList.toggle('active');
+   headeContainer.classList.toggle('active');
    headerMenu.classList.toggle('active');
+   headerButton.classList.toggle('active');
 
    // Добавляем или убираем класс, чтобы заблокировать/разблокировать скролл
    body.classList.toggle('scroll-lock');
@@ -44,15 +48,3 @@ headerMenu.addEventListener('click', (event) => {
 });
 
 
-
-//  переменные размеры для шрифта в зависимости от размера родительского элемента
-
-const bodyHeroItemArray = document.querySelectorAll('.body-hero__item');
-
-// bodyHeroItemArray.forEach(element => {
-
-// });
-
-// document.addEventListener('')
-
-console.log(bodyHeroItemArray);
