@@ -1,0 +1,28 @@
+{
+   "projects": [
+      {
+         "id": 1,
+         "image": "img/portfolio/main.png",
+         "title": "MosEcoBox",
+         "font": "Gothic A1",
+         "colors": "img/portfolio/colors-1.svg",
+         "url": "https://www.google.com"
+      },
+      {
+         "id": 2,
+         "image": "img/portfolio/dathletics.png",
+         "title": "D`Athletics",
+         "font": "Roboto",
+         "colors": "img/portfolio/colors-1.svg",
+         "url": "https://barister.github.com/dathletics"
+      },
+      {
+         "id": 3,
+         "image": "img/portfolio/makeuplist.png",
+         "title": "MakeupList",
+         "font": "Cardo",
+         "colors": "img/portfolio/colors-1.svg",
+         "url": "https://barister.github.com/makeuplist"
+      }
+   ]
+}

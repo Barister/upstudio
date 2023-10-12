@@ -604,11 +604,22 @@ main {
    &__body {
       border-radius: 50px;
       background-color: #D9D9D9;
-      //overflow: hidden;
       display: flex;
       justify-content: space-between;
-      //align-items: center;
-      //gap: 40px;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         top: 32%;
+         left: 0;
+         height: 37%;
+         aspect-ratio: 2 /0.8;
+         background: url('@img/portfolio/Аа.svg') no-repeat;
+         z-index: 2;
+         @media (max-width: $mobile) {
+            display: none;
+         }
+      }
       @media (max-width: $mobile) {
          flex-direction: column-reverse;
       }
@@ -621,6 +632,8 @@ main {
 
    &__content {
       flex: 1 1 55%;
+      position: relative;
+      z-index: 5;
    }
 }
 .content-portfolio {
@@ -644,16 +657,17 @@ main {
    /* .content-portfolio__item */
 
    &__item {
-      &:not(:last-child) {
-         margin-bottom: 40px;
-      }
-      img {
-         max-width: 100%;
-      }
+     
    }
 }
 .item-content {
    max-width: 375px;
+   &:not(:last-child) {
+      margin-bottom: 40px;
+   }
+   img {
+      max-width: 100%;
+   }
    h5 {
       color:  #0F0F0F;
       font-size: 40px;
@@ -727,6 +741,10 @@ main {
       padding-bottom: 2.0rem;
       img {
          max-width: 100%;
+         transition: all 0.3s ease 0s;
+         &:hover {
+            transform:scale(1.01);
+         }
       }
    }
 
