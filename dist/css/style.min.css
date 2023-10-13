@@ -1014,3 +1014,105 @@ body.scroll-lock {
 .choose__call-to-action {
   position: relative;
 }
+
+.rules {
+  background-color: #F6F6F6;
+  padding-top: clamp(4rem, 8vw - 2rem, 12rem);
+  padding-bottom: clamp(4rem, 8vw - 2rem, 8rem);
+  /* .rules__container */
+  /* .rules__body */
+}
+@media (max-width: 767.98px) {
+  .rules__container {
+    padding-left: clamp(1rem, 8vw - 2rem, 80px);
+    padding-right: clamp(1rem, 8vw - 2rem, 80px);
+  }
+}
+.rules__body {
+  border-radius: 50px;
+  background: #D9D9D9;
+  padding: clamp(3rem, 12vw - 1rem, 45px) clamp(1rem, 6vw - 2rem, 90px);
+}
+@media (max-width: 767.98px) {
+  .rules__body {
+    padding: clamp(3rem, 12vw - 1rem, 45px) clamp(1rem, 12vw - 2rem, 60px);
+  }
+}
+
+.body-rules {
+  /* .body-rules__title */
+  /* .body-rules__cards */
+}
+.body-rules__title {
+  font-weight: 500;
+  font-size: clamp(2.2rem, 8vw - 1rem, 44px);
+  margin-bottom: 30px;
+}
+.cards-rules {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  /* .cards-rules__item */
+}
+@media (max-width: 991.98px) {
+  .cards-rules {
+    justify-content: center;
+  }
+}
+.cards-rules__item {
+  flex: 0 1 32%;
+  width: 32%;
+  aspect-ratio: 1;
+  border-radius: 33px;
+  background: #2D2D2D;
+  box-shadow: 0px 11px 24px 0px rgba(0, 0, 0, 0.25);
+  padding: 25px 20px;
+}
+@media (max-width: 991.98px) {
+  .cards-rules__item {
+    flex: 0 0 45%;
+  }
+}
+@media (max-width: 767.98px) {
+  .cards-rules__item {
+    flex: 0 1 100%;
+  }
+}
+
+.item-rules {
+  position: relative;
+  /* .item-rules__content */
+  /* .item-rules__title */
+  /* .item-rules__text */
+}
+.item-rules::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: calc(100% - 50px);
+  width: 3px;
+  border-radius: 14px;
+  background: var(--yellow, #69BF3D);
+  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.25);
+  margin: 25px 0;
+}
+.item-rules__content {
+  padding-left: 15px;
+}
+.item-rules__title {
+  font-size: 2.4rem;
+  color: #69BF3D;
+  line-height: 100%; /* 24px */
+  margin-bottom: 5px;
+}
+.item-rules__text {
+  font-weight: 300;
+  font-size: clamp(1.4rem, 8vw - 1rem, 16px);
+  color: #fff;
+}
+.item-rules__text p:not(:last-child) {
+  margin-bottom: 15px;
+}
