@@ -955,10 +955,6 @@ body.scroll-lock {
 @media (max-width: 991.98px) {
   .items-services__item {
     flex: 0 0 auto;
-  }
-}
-@media (max-width: 991.98px) and (hover: hover) {
-  .items-services__item {
     margin-bottom: 10px;
   }
 }
@@ -990,4 +986,31 @@ body.scroll-lock {
   font-weight: 400;
   line-height: 100%; /* 16px */
   letter-spacing: 0.48px;
+}
+
+.choose {
+  background-color: #F6F6F6;
+  padding-top: clamp(4rem, 8vw - 2rem, 12rem);
+  padding-bottom: clamp(4rem, 8vw - 2rem, 8rem);
+  /* .choose__container */
+  /* .choose__title */
+  /* .choose__subtitle */
+  /* .choose__call-to-action */
+}
+.choose__container {
+  text-align: center;
+}
+.choose__title {
+  font-size: clamp(3.6rem, 8vw - 1rem, 64px);
+  text-transform: none;
+  margin-bottom: 25px;
+  text-wrap: balance;
+}
+.choose__subtitle {
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: clamp(4rem, 8vw - 2rem, 7rem);
+}
+.choose__call-to-action {
+  position: relative;
 }
