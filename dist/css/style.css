@@ -1329,3 +1329,128 @@ body.scroll-lock {
   display: inline-block;
   padding: clamp(1rem, 6vw - 2rem, 2rem) clamp(2rem, 6vw - 2rem, 5rem);
 }
+
+.stages {
+  background: #F6F6F6;
+  padding-top: clamp(10rem, 12vw - 2rem, 12rem);
+  padding-bottom: clamp(4rem, 12vw - 2rem, 5rem);
+  /* .stages__container */
+  /* .stages__title */
+  /* .stages__subtitle */
+  /* .stages__cards */
+  /* .stages__button */
+}
+.stages__container {
+  text-align: center;
+}
+.stages__title {
+  font-size: clamp(3.6rem, 12vw - 1rem, 64px);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.stages__subtitle {
+  color: #2D2D2D;
+  font-size: clamp(2rem, 8vw - 1rem, 24px);
+  font-weight: 500;
+  line-height: 100%; /* 24px */
+  letter-spacing: 0.72px;
+  margin-bottom: 30px;
+}
+.stages__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 15px;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .stages__cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+.stages__button {
+  position: relative;
+}
+@media (max-width: 991.98px) {
+  .stages__button {
+    display: none;
+  }
+}
+
+.cards-stages {
+  /* .cards-stages__item */
+}
+.cards-stages__item {
+  border-radius: 20px;
+  background: #2D2D2D;
+  color: #fff;
+  flex: 0 0 24%;
+  position: relative;
+  padding: 15px;
+  overflow: hidden;
+  min-height: 138px;
+  min-width: 220px;
+}
+.cards-stages__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 67px;
+  height: 87px;
+}
+
+.item-stages {
+  text-align: left;
+  padding-right: 70px;
+  /* .item-stages__title */
+  /* .item-stages__text */
+}
+@media (max-width: 500px) {
+  .item-stages {
+    margin-bottom: 10px;
+  }
+}
+.item-stages__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 123%; /* 19.68px */
+}
+.item-stages__text {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 123%; /* 17.22px */
+}
+
+.item-stages--01::after {
+  background: url("../img/stages/1.svg") bottom right no-repeat;
+  right: 17px;
+}
+
+.item-stages--02::after {
+  background: url("../img/stages/2.svg") bottom right no-repeat;
+  right: 0;
+}
+
+.item-stages--03::after {
+  background: url("../img/stages/3.svg") bottom right no-repeat;
+  right: 0;
+}
+
+.item-stages--04::after {
+  background: url("../img/stages/4.svg") bottom right no-repeat;
+  right: 0;
+}
+
+.item-stages--05::after {
+  background: url("../img/stages/5.svg") bottom right no-repeat;
+  right: 0;
+}
+
+.item-stages--06::after {
+  background: url("../img/stages/6.svg") bottom right no-repeat;
+  right: 0;
+}
