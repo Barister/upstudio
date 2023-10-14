@@ -131,3 +131,20 @@ function buildPortfolioProject(project) {
    projectLink.href = `${project.url}`;
 
 }
+
+
+
+// quiz options choosing
+
+const quizBody = document.querySelector('.quiz-quiz');
+const quizOptions = document.querySelectorAll('.items-quiz__option');
+
+quizBody.addEventListener('click', (event) => {
+   if (event.target.closest('.items-quiz__option')) {
+      let clickedOption = event.target.closest('.items-quiz__option');
+
+      clickedOption.classList.toggle('option-quiz--active');
+
+      console.log('clickedOption:', clickedOption);
+   }
+});
