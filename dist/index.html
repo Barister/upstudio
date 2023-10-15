@@ -325,7 +325,8 @@
          </section>
          <section class="stages">
             <div class="stages__container">
-               <h2 class="stages__title title lines">Этапы работы</h2>
+               <h2 class="stages__title title"><span class="line line--left"></span>Этапы работы<span
+                     class="line line--right"></span></h2>
                <div class="stages__subtitle">
                   <p>проще не бывает</p>
                </div>
@@ -370,7 +371,31 @@
                <div class="stages__button btn btn--bullet lines"><span>Оставить заявку</span></div>
             </div>
          </section>
-         <section id="contacts" class="contacts"></section>
+         <section id="contacts" class="contacts">
+            <div class="contacts__container">
+               <div class="contacts__body body-contacts">
+                  <div class="body-contacts__art">
+
+                  </div>
+                  <form action="" class="body-contacts__form form-contacts" method="post">
+                     <fieldset>
+                        <legend>
+                           <h3 class="form-contacts__title">Оставьте заявку
+                           </h3>
+                           <p class="form-contacts__subtitle">И мы перезвоним в течение 15 минут</p>
+                        </legend>
+                        <label for="name">
+                           <input type="text" id="name" name="name" minlength="2" placeholder="Ваше имя" required>
+                        </label>
+                        <label for="phone">
+                           <input type="phone" name="phone" id="phone" placeholder="+7 (900) 000-00-00" required>
+                        </label>
+                     </fieldset>
+                     <button class="form-contacts__button btn btn--green" type="submit">Отправить</button>
+                  </form>
+               </div>
+            </div>
+         </section>
       </main>
 
       
