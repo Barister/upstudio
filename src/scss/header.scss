@@ -70,11 +70,6 @@
       }
       @media (max-width: $tablets) {
          display: none;
-         // display: block;
-         // position: fixed;
-         // bottom: 40px;
-         // right: 50%;
-         // transform: translateX(50%);
          grid-column: 1 / -1;
          grid-row: 3 / 4;
          
@@ -93,10 +88,8 @@
       display: none;
       justify-self: right;
       position: relative;
-      //width: 100px;
       height: 33px;
-      //right: 0;
-      //transform: translateY(-50%);
+      
       span {
          position: relative;
          display: block;
@@ -152,16 +145,13 @@
 }
 .menu {
    
-   //justify-self: flex-end;
+   
    /* .menu__list */
 
    &__list {
       
       display: grid;
       grid-template-columns: repeat(4,auto);
-      // display: flex;
-      //justify-content: flex-start;
-      // flex-wrap: wrap;
       column-gap: 2.0rem;
       @media (max-width: $tablets){
          display: block;

@@ -148,3 +148,10 @@ quizBody.addEventListener('click', (event) => {
       console.log('clickedOption:', clickedOption);
    }
 });
+
+
+//footer today year
+
+const copyrightYear = document.querySelector('.copyright-year');
+
+copyrightYear.innerText = new Date().getFullYear();
