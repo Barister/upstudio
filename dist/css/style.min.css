@@ -58,7 +58,7 @@ body.scroll-lock {
 .wrapper {
   height: 100%;
   width: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 [class*=__container] {
@@ -487,7 +487,12 @@ body.scroll-lock {
     padding-top: 15rem;
   }
 }
-@media (max-height: 550px), (max-width: 479.98px) {
+@media (max-width: 479.98px) {
+  main {
+    padding-top: 13rem;
+  }
+}
+@media (max-height: 550px) and (max-width: 479.98px) {
   main {
     padding-top: 11rem;
   }

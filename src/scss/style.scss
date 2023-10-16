@@ -70,7 +70,7 @@ $smallMobile: 479.98px;
 .wrapper {
    height: 100%;
    width: 100%;
-   overflow-x: clip;
+   overflow-x: hidden;
    
 }
 
@@ -223,7 +223,10 @@ main {
    @media (max-height: 750px), (max-width: $tablets) {
       padding-top: 15.0rem;
    }
-   @media (max-height: 550px), (max-width: $smallMobile){
+   @media (max-width: $smallMobile) {
+      padding-top: 13.0rem;
+   }
+   @media (max-height: 550px) and (max-width: $smallMobile){
       padding-top: 11.0rem;
    }
    
