@@ -37,13 +37,18 @@ burger.addEventListener('click', () => {
 });
 
 // Событие при нажатии на ссылку в меню
-headerMenu.addEventListener('click', (event) => {
+headeContainer.addEventListener('click', (event) => {
+
+   console.log('видим клик по меню бургера по:', event.target.tagName);
+
    // Проверяем, является ли клик на ссылку
    if (event.target.tagName === 'A') {
       // Сворачиваем бургер и меню
       burger.classList.remove('active');
+      headeContainer.classList.remove('active');
       headerMenu.classList.remove('active');
       body.classList.remove('scroll-lock');
+      headerButton.classList.remove('active');
    }
 });
 
