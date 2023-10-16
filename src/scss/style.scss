@@ -223,9 +223,9 @@ main {
    @media (max-height: 750px), (max-width: $tablets) {
       padding-top: 15.0rem;
    }
-   @media (max-width: $smallMobile) {
-      padding-top: 13.0rem;
-   }
+   // @media (max-width: $smallMobile) {
+   //    padding-top: 13.0rem;
+   // }
    // @media (max-height: 550px) and (max-width: $smallMobile){
    //    padding-top: 11.0rem;
    // }
@@ -246,7 +246,7 @@ main {
       row-gap: clamp(3.0rem, 70px, 8.0rem);
       justify-content: center;
       align-items: center;
-      @media (max-height: 750px) or (max-width: $tablets) {
+      @media (max-height: 750px), (max-width: $tablets) {
          height: unset;
          padding-bottom: 120px;
       }
