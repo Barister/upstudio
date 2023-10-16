@@ -179,14 +179,12 @@ body.scroll-lock {
   left: 0;
   width: 100%;
   z-index: 9;
+  background-color: rgba(255, 255, 255, 0.99);
   /* .header__container */
   /* .header__logo */
   /* .header__menu */
   /* .header__button */
   /* .header__burger */
-}
-.header.scroll {
-  background-color: rgba(255, 255, 255, 0.99);
 }
 .header__container {
   display: grid;
@@ -484,14 +482,14 @@ body.scroll-lock {
   /* .bottom-footer__policy */
 }
 /*******************************************************************************************************************/
-@media (max-height: 750px) or (max-width: 991.98px) {
+@media (max-height: 750px), (max-width: 991.98px) {
   main {
-    margin-top: 15rem;
+    padding-top: 15rem;
   }
 }
-@media (max-height: 550px) or (max-width: 479.98px) {
+@media (max-height: 550px), (max-width: 479.98px) {
   main {
-    margin-top: 11rem;
+    padding-top: 11rem;
   }
 }
 

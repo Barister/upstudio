@@ -220,12 +220,13 @@ $smallMobile: 479.98px;
 main {
    //height: 2000px;
    
-   @media (max-height: 750px) or (max-width: $tablets) {
-      margin-top: 15.0rem;
+   @media (max-height: 750px), (max-width: $tablets) {
+      padding-top: 15.0rem;
    }
-   @media (max-height: 550px) or (max-width: $smallMobile) {
-      margin-top: 11.0rem;
+   @media (max-height: 550px), (max-width: $smallMobile){
+      padding-top: 11.0rem;
    }
+   
 }
 
 
