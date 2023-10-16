@@ -331,7 +331,7 @@ body.scroll-lock {
   }
 }
 .menu__item {
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 .menu a:hover {
   text-decoration: underline;
