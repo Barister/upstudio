@@ -226,9 +226,9 @@ main {
    @media (max-width: $smallMobile) {
       padding-top: 13.0rem;
    }
-   @media (max-height: 550px) and (max-width: $smallMobile){
-      padding-top: 11.0rem;
-   }
+   // @media (max-height: 550px) and (max-width: $smallMobile){
+   //    padding-top: 11.0rem;
+   // }
    
 }
 

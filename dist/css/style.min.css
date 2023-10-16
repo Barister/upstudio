@@ -492,11 +492,6 @@ body.scroll-lock {
     padding-top: 13rem;
   }
 }
-@media (max-height: 550px) and (max-width: 479.98px) {
-  main {
-    padding-top: 11rem;
-  }
-}
 
 .hero {
   /* .hero__container */
