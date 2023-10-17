@@ -131,9 +131,15 @@
    }
 
    &__contacts {
+      
       text-align: right;
       @media (max-width: $tablets) {
          color: #D9D9D9;
+         font-size: clamp(0.9rem, 6vw - 2rem, 1.2rem);
+         font-weight: 400;
+         line-height: 123%; /* 11.07px */
+         letter-spacing: 1.26px;
+               
       }
       
    }

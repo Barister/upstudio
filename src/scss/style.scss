@@ -55,6 +55,7 @@ html {
 body {
    font-size: 1.6rem;
    font-family: Roboto, sans-serif;
+   color: #2D2D2D;
    &.scroll-lock {
       overflow: hidden;
    }
@@ -90,6 +91,16 @@ $smallMobile: 479.98px;
    // }
 }
 
+[class*="__lines"] {
+   display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      @media (max-width: $smallMobile) {
+         //justify-content: center;
+         margin: 0 -10px;
+   }
+}
 
 
 // Modules
@@ -107,22 +118,26 @@ $smallMobile: 479.98px;
 
 .subtitle {
    position: relative;
-      
+   display: inline-block;
       padding: 2.0rem 0px 1.0rem 0px;
       p {
          letter-spacing: 1.12px;
+         &::after {
+            content: '';
+            height: 2px;
+            width: 100%; /* 309/500 */
+            background-color: #69BF3D;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            @media (max-width: 375px) {
+               width: 80%;
+            }
+         }
       }
    &--underlined {
-      &::after {
-         content: '';
-         height: 2px;
-         width: 61.8%; /* 309/500 */
-         background-color: #69BF3D;
-         position: absolute;
-         bottom: 0;
-         left: 50%;
-         transform: translateX(-50%);
-      }
+      
    }
 }
 
@@ -200,7 +215,7 @@ $smallMobile: 479.98px;
    height: 1px;
    background: #69BF3D;
    @media (max-width: $smallMobile) {
-      display: none;
+      //display: none;
    }
 }
 
@@ -245,7 +260,7 @@ main {
       flex-direction: column;
       row-gap: clamp(3.0rem, 70px, 8.0rem);
       justify-content: center;
-      align-items: center;
+      //align-items: center;
       @media (max-height: 750px), (max-width: $tablets) {
          height: unset;
          padding-bottom: 120px;
@@ -299,13 +314,17 @@ main {
    align-items: center;
    gap: 2.0rem;
    max-width: 75rem;
-
+   margin: 0 auto;
    @media (max-width: $mobile) {
       max-width: 40rem;
       flex-wrap: wrap;
    }
    @media (max-width: $smallMobile) {
       gap: 1.0rem;
+   }
+
+   &__lines {
+      
    }
 }
 .item-hero {
@@ -431,7 +450,7 @@ main {
 		/* .about__body */
 
 		&__body {
-         max-width: 130rem;
+         //max-width: 130rem;
          background-color: #2D2D2D;
          border-radius: 50px;
          box-shadow: 0px 18px 25px -3px rgba(0, 0, 0, 0.40);
@@ -841,7 +860,7 @@ main {
    /* .services__title */
 
    &__title {
-      display: inline-block;
+      //display: inline-block;
       margin-bottom: clamp(4.0rem, 8vw - 2rem, 14.5rem);
    }
 
@@ -1172,7 +1191,7 @@ main {
       line-height: 100%;
       margin-bottom: 40px;
       //text-wrap: balance;
-      white-space: break-spaces;
+      //white-space: break-spaces;
    }
 
    /* .quiz__body */
@@ -1486,6 +1505,10 @@ main {
 
    &__button {
       position: relative;
+      
+   }
+
+   &__lines {
       @media (max-width: $tablets) {
          display: none;
       }
