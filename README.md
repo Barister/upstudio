@@ -1,11 +1,12 @@
 # UpStudio Website
 
 ## Overview
-This project is a landing page for UpStudio, a web development and digital marketing agency. The design is professional and responsive, built using HTML, CSS, and JavaScript.
+This project is a landing page for UpStudio, developed using HTML, CSS, JavaScript, and Gulp for task automation during development.
 
 ## Key Features
-- **Responsive Design**: The website adapts well to various screen sizes.
-- **Service Descriptions**: Detailed sections on services like website creation, marketing, and more.
+- **Gulp Automation**: Automates tasks like minifying CSS/JS and image optimization.
+- **Responsive Design**: Works well across multiple devices.
+- **Service Sections**: Detailed descriptions of services offered by UpStudio.
 - **Contact Forms**: Allows users to submit requests directly.
 
 ## Future Improvements
