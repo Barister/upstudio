@@ -15,4 +15,4 @@ This project is a landing page for UpStudio, a web development and digital marke
 ## How to Run
 Clone the repository and open `index.html` in your browser.
 
-## [Demo](https://https://barister.github.io/upstudio/dist)
+## [Demo](https://barister.github.io/upstudio/dist)
